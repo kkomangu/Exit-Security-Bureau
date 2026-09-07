@@ -702,11 +702,11 @@
 
             let text = '';
             if (type === 'attendance') {
-                text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 보안국으로 출석해주시길 바랍니다.`;
+                text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 사유: ${reason} 건으로 출석 요구합니다. - EXIT 보안국 -`;
             } else if (type === 'wanted') {
-                text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
+                text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 출석 불응으로 수배로 전환되어 ${startTime}부터 ${endTime}까지 수배RP 진행하겠습니다. - EXIT 보안국 -`;
             } else if (type === 'end') {
-                text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+                text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 수배 상황 종료되었습니다. - EXIT 보안국 -`;
             }
 
             copyToClipboard(text, '수배 양식이 복사되었습니다.');
@@ -723,7 +723,7 @@
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 보안국으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 사유: ${reason} 건으로 출석 요구합니다. - EXIT 보안국 -`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수 (사유는 미입력 시 '사유 미기재' 처리)
@@ -732,7 +732,7 @@
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 출석 불응으로 수배로 전환되어 ${startTime}부터 ${endTime}까지 수배RP 진행하겠습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -741,7 +741,7 @@
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 수배 상황 종료되었습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
@@ -757,7 +757,7 @@ function copyWantedNotice(type) {
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id})  사유: ${reason} - 사유 확인을 위해 보안국으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 사유: ${reason} 건으로 출석 요구합니다. - EXIT 보안국 -`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수
@@ -766,7 +766,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 출석 불응으로 수배로 전환되어 ${startTime}부터 ${endTime}까지 수배RP 진행하겠습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -775,7 +775,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 수배 상황 종료되었습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
@@ -791,7 +791,7 @@ function copyWantedNotice(type) {
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 보안국으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 사유: ${reason} 건으로 출석 요구합니다. - EXIT 보안국 -`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수
@@ -800,7 +800,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 출석 불응으로 수배로 전환되어 ${startTime}부터 ${endTime}까지 수배RP 진행하겠습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -809,7 +809,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 수배 상황 종료되었습니다. - EXIT 보안국 -`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
