@@ -879,7 +879,7 @@ function copyWarrantNotice(type) {
                     return;
                 }
                 const timeLimit = getFormattedTime(5);
-                const text = `/보안국 [ 출석요구서 ] 닉네임 : ${name} 고유번호 : ${id} 사유 : ${reason} ${timeLimit} 까지 출석바랍니다. -엑시트 보안국 ;
+                const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 사유: ${reason} 건으로 출석 요구합니다. - EXIT 보안국 -`;
                 copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
             } 
             else if (type === 'wanted') {
@@ -889,11 +889,11 @@ function copyWarrantNotice(type) {
                 }
                 const startTime = getFormattedTime(0);
                 const endTime = getFormattedTime(30);
-                const text = `/보안국 [ 수배공지 ] 닉네임 : ${name} 고유번호 : ${id} ${startTime} ~ ${endTime} 수배알피 진행합니다. 위치추적 시작하겠습니다. -엑시트 경찰청 ;
+                const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 출석 불응으로 수배로 전환되어 ${startTime}부터 ${endTime}까지 수배RP 진행하겠습니다. - EXIT 보안국 -`;
                 copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
             } 
             else if (type === 'end') {
-                const text = `/보안국 수배 상황 종료되었습니다.`;
+                const text = `/보안국 [ EXIT 보안국 에서 알려드립니다 ] | ${name} (${id}) 님 수배 상황 종료되었습니다. - EXIT 보안국 -`;
                 copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
             }
         }
