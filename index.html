@@ -703,11 +703,11 @@
 
             let text = '';
             if (type === 'attendance') {
-                text = `/경찰청 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 경찰청으로 출석해주시길 바랍니다.`;
+                text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 보안국으로 출석해주시길 바랍니다.`;
             } else if (type === 'wanted') {
-                text = `/경찰청 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason} - 해당 인원을 목격하신 시민분들께서는 경찰청으로 신고바랍니다.`;
+                text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
             } else if (type === 'end') {
-                text = `/경찰청 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+                text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
             }
 
             copyToClipboard(text, '수배 양식이 복사되었습니다.');
@@ -724,7 +724,7 @@
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 경찰청으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 보안국으로 출석해주시길 바랍니다.`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수 (사유는 미입력 시 '사유 미기재' 처리)
@@ -733,7 +733,7 @@
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 경찰청으로 신고바랍니다.`;
+        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -742,7 +742,7 @@
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
@@ -758,7 +758,7 @@ function copyWantedNotice(type) {
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 경찰청으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 보안국으로 출석해주시길 바랍니다.`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수
@@ -767,7 +767,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 경찰청으로 신고바랍니다.`;
+        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -776,7 +776,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
@@ -792,7 +792,7 @@ function copyWantedNotice(type) {
             showToast('닉네임, 고유번호, 사유를 모두 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 경찰청으로 출석해주시길 바랍니다.`;
+        const text = `/보안국 [출석 요구] 닉네임: ${name} (${id}) / 사유: ${reason} - 사유 확인을 위해 지체없이 보안국으로 출석해주시길 바랍니다.`;
         copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
     } 
     // 2. 수배 공지: 고유번호, 닉네임 필수
@@ -801,7 +801,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 경찰청으로 신고바랍니다.`;
+        const text = `/보안국 [수배 공지] 닉네임: ${name} (${id}) / 사유: ${reason || '사유 미기재'} - 해당 인원을 목격하신 시민분들께서는 보안국으로 신고바랍니다.`;
         copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
     } 
     // 3. 수배 종료: 고유번호, 닉네임 필수
@@ -810,7 +810,7 @@ function copyWantedNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
+        const text = `/보안국 [수배 종료] 닉네임: ${name} (${id}) 님의 수배가 종료되었음을 알려드립니다.`;
         copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
     }
 }
@@ -826,7 +826,7 @@ function copyWarrantNotice(type) {
             showToast('닉네임과 고유번호를 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [영장 RP 전환] 대상: ${name} (${id}) / 팩션: ${faction || '해당 팩션'} - 영장 발부에 따라 영장 RP 상태로 전환됩니다.`;
+        const text = `/보안국 [영장 RP 전환] 대상: ${name} (${id}) / 팩션: ${faction || '해당 팩션'} - 영장 발부에 따라 영장 RP 상태로 전환됩니다.`;
         copyToClipboard(text, '영장 RP 전환 양식이 복사되었습니다.');
     } 
     // 2. 대표 대기 요청: 팩션명 필수
@@ -835,7 +835,7 @@ function copyWarrantNotice(type) {
             showToast('팩션명을 입력해주세요.');
             return;
         }
-        const text = `/경찰청 [대표 대기 요청] 팩션명: ${faction} - 영장 집행과 관련하여 대표자께서는 즉시 대기해주시기 바랍니다.`;
+        const text = `/보안국 [대표 대기 요청] 팩션명: ${faction} - 영장 집행과 관련하여 대표자께서는 즉시 대기해주시기 바랍니다.`;
         copyToClipboard(text, '대표 대기 요청 양식이 복사되었습니다.');
     } 
     // 3. 영장 확인 완료: 팩션명 필수
@@ -845,7 +845,7 @@ function copyWarrantNotice(type) {
             return;
         }
         const targetInfo = (name || id) ? ` / 대상: ${name || 'OOO'} (${id || '000'})` : '';
-        const text = `/경찰청 [영장 확인 완료] 팩션명: ${faction}${targetInfo} - 영장 확인 절차가 모두 정상 완료되었습니다.`;
+        const text = `/보안국 [영장 확인 완료] 팩션명: ${faction}${targetInfo} - 영장 확인 절차가 모두 정상 완료되었습니다.`;
         copyToClipboard(text, '영장 확인 완료 양식이 복사되었습니다.');
     }
 }
@@ -880,7 +880,7 @@ function copyWarrantNotice(type) {
                     return;
                 }
                 const timeLimit = getFormattedTime(5);
-                const text = `/경찰청 [ 출석요구서 ] 닉네임 : ${name} 고유번호 : ${id} 사유 : ${reason} ${timeLimit} 까지 출석바랍니다. -『 엑시트 경찰청 』-`;
+                const text = `/보안국 [ 출석요구서 ] 닉네임 : ${name} 고유번호 : ${id} 사유 : ${reason} ${timeLimit} 까지 출석바랍니다. -엑시트 보안국 ;
                 copyToClipboard(text, '출석 요구 양식이 복사되었습니다.');
             } 
             else if (type === 'wanted') {
@@ -890,11 +890,11 @@ function copyWarrantNotice(type) {
                 }
                 const startTime = getFormattedTime(0);
                 const endTime = getFormattedTime(30);
-                const text = `/경찰청 [ 수배공지 ] 닉네임 : ${name} 고유번호 : ${id} ${startTime} ~ ${endTime} 수배알피 진행합니다. 위치추적 시작하겠습니다. -『 엑시트 경찰청 』-`;
+                const text = `/보안국 [ 수배공지 ] 닉네임 : ${name} 고유번호 : ${id} ${startTime} ~ ${endTime} 수배알피 진행합니다. 위치추적 시작하겠습니다. -엑시트 경찰청 ;
                 copyToClipboard(text, '수배 공지 양식이 복사되었습니다.');
             } 
             else if (type === 'end') {
-                const text = `/경찰청 수배 상황 종료되었습니다.`;
+                const text = `/보안국 수배 상황 종료되었습니다.`;
                 copyToClipboard(text, '수배 종료 양식이 복사되었습니다.');
             }
         }
@@ -909,7 +909,7 @@ function copyWarrantNotice(type) {
                     showToast('닉네임과 고유번호를 입력해주세요.');
                     return;
                 }
-                const text = `/경찰청 고유번호 ${id} 닉네임 ${name} 님 수배 RP 진행 도중 사유지에 있는 것이 확인되어 수배 RP 가 사유지에 대한 영장 RP 로 전환됨을 통보합니다.`;
+                const text = `/보안국 고유번호 ${id} 닉네임 ${name} 님 수배 RP 진행 도중 사유지에 있는 것이 확인되어 수배 RP 가 사유지에 대한 영장 RP 로 전환됨을 통보합니다.`;
                 copyToClipboard(text, '영장 RP 전환 양식이 복사되었습니다.');
             } 
             else if (type === 'wait') {
@@ -917,7 +917,7 @@ function copyWarrantNotice(type) {
                     showToast('팩션명을 입력해주세요.');
                     return;
                 }
-                const text = `/경찰청 ${faction} 팩션 대표는 발부된 영장 확인을 위해 사유지 앞에서 대기 하시길 바랍니다.`;
+                const text = `/보안국 ${faction} 팩션 대표는 발부된 영장 확인을 위해 사유지 앞에서 대기 하시길 바랍니다.`;
                 copyToClipboard(text, '대표 대기 요청 양식이 복사되었습니다.');
             } 
             else if (type === 'complete') {
@@ -925,7 +925,7 @@ function copyWarrantNotice(type) {
                     showToast('팩션명을 입력해주세요.');
                     return;
                 }
-                const text = `/경찰청 ${faction} 팩션에 대한 영장 확인이 완료되었습니다. 준비되신 경우 인원 공표 해주시길 바랍니다.`;
+                const text = `/보안국 ${faction} 팩션에 대한 영장 확인이 완료되었습니다. 준비되신 경우 인원 공표 해주시길 바랍니다.`;
                 copyToClipboard(text, '영장 확인 완료 양식이 복사되었습니다.');
             }
         }
